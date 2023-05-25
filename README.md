@@ -51,10 +51,10 @@ root
 │   └───templates
 │       ├── sushi.yext.com
 │       │   ├── index.tsx
-│       │   └── 404.tsx
+│       │   └── location.tsx
 │       └── tacos.yext.com
 │           ├── index.tsx
-│           └── 404.tsx
+│           └── location.tsx
 ├── package.json
 ├── package-lock.json
 ├── tsconfig.json

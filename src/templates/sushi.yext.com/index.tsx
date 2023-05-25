@@ -1,34 +1,45 @@
 import * as React from "react";
-import "../../styles/tacos.yext.com/index.css";
+import { fetch } from "@yext/pages/util";
 import {
   Template,
   GetPath,
   GetHeadConfig,
   HeadConfig,
+  TransformProps,
   TemplateConfig,
   TemplateProps,
   TemplateRenderProps,
 } from "@yext/pages";
-import Banner from "../../components/BannerBrand1";
+import "../../styles/sushi.yext.com/index.css";
 import PageLayout from "../../components/PageLayout";
-import Favicon from "../../assets/images/taco-favicon.ico";
+import Favicon from "../../assets/images/sushi-favicon.ico";
+import Banner from "../../components/BannerBrand2";
+
 
 export const config: TemplateConfig = {
-  name: "404",
+  name: "yext-sushi",
 };
 
 export const getPath: GetPath<TemplateProps> = () => {
-  return `404.html`;
+  return `index.html`;
 };
+
 
 export const getHeadConfig: GetHeadConfig<
   TemplateRenderProps
 > = (): HeadConfig => {
   return {
-    title: "404 Page",
+    title: "Static Page Example",
     charset: "UTF-8",
     viewport: "width=device-width, initial-scale=1",
     tags: [
+      {
+        type: "meta",
+        attributes: {
+          name: "description",
+          content: "Static page example meta description.",
+        },
+      },
       {
         type: "link",
         attributes: {
@@ -41,14 +52,16 @@ export const getHeadConfig: GetHeadConfig<
   };
 };
 
-const FourOhFour: Template<TemplateRenderProps> = () => {
+
+const Index: Template<TemplateRenderProps> = ({ document }) => {
+  const { _site } = document;  
   return (
     <>
-      <PageLayout>
-        <Banner name={"404 - Page not found"} />
+      <PageLayout _site={_site}>
+      <Banner name={"Yext Sushi"} />
         <div className="centered-container">
-          <div className="flex justify-center items-center text-2xl bg-gray-200 h-60 rounded-md shadow-md">
-            <p>This page does not exist.</p>
+          <div className="section space-y-14 px-10">
+          <h1>Hello world!</h1>
           </div>
         </div>
       </PageLayout>
@@ -56,4 +69,4 @@ const FourOhFour: Template<TemplateRenderProps> = () => {
   );
 };
 
-export default FourOhFour;
+export default Index;
