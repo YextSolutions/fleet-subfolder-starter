@@ -1,6 +1,9 @@
 # Fleet Management - Subfolder Starter
 
-This repository provides a basic example of how manage a multi-site repository using subfolders.
+This repository provides a basic example of how manage a multi-site repository using subfolders. Refer to the following example sites below:
+
+1. https://sushi.yext.com.pagescdn.com/ny/new-york/yext-sushi-location1
+1. https://tacos.yext.com.pagescdn.com/location3-upper-west-side
 
 ## Getting Started
 
